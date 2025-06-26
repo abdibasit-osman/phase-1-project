@@ -90,3 +90,48 @@ document.getElementById('authForm').addEventListener('submit', async function(e)
   }
 });
 
+async function createBooking(booking) {
+  const res = await fetch(`${API_URL}/posts`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(booking)
+  });
+  return await res.json();
+}
+
+// Booking form submit event
+document.getElementById('bookingForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+  if (!loggedInUser) {
+    alert("You are not logged in. Please log in again.");
+    showLoginSection();
+    return;
+  }
+
+  const service = document.getElementById('service').value;
+  const address = document.getElementById('address').value;
+  const date = document.getElementById('date').value;
+  const instructions = document.getElementById('instructions').value;
+
+  const booking = {
+    clientId: loggedInUser.id,
+    service,
+    address,
+    date,
+    instructions,
+    status: 'Pending'
+  };
+
+  await createBooking(booking);
+
+  e.target.reset();
+  
+  showThankYouSection();
+});
+
+// Handle 'Make Another Booking' button
+document.getElementById('makeAnotherBookingBtn').addEventListener('click', function() {
+  showBookingSection();
+});
