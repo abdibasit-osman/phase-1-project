@@ -68,7 +68,7 @@
 
 <h2>API Usage</h2>
 <p>
-  This project uses a public API for data storage ( <a href="https://jsonplaceholder.typicode.com/" target="_blank">JSONPlaceholder</a>). All communication is asynchronous and uses JSON.
+  This project uses an API for data storage ( JSON-server ). All communication is asynchronous and uses JSON.
 </p>
 
 <h2>License</h2>

@@ -13,7 +13,7 @@
       "role": "houseworker"
     }
   ],
-  "bookings": [
+  "posts": [
     {
       "id": 1,
       "clientId": 1,
