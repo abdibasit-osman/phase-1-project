@@ -54,6 +54,16 @@
   </li>
 </ol>
 
+<h1>User story</h1>
+
+<ul>
+  <li>Users register or log in as either a client or a houseworker.</li>
+  <li>Clients see a booking form to request housekeeping services and track their bookings' statuses.</li>
+  <li>Houseworkers see a dashboard with new booking requests, can accept jobs, and update the status (e.g., Accepted, In Progress, Completed).</li>
+  <li>Status updates are visible in real time to both clients and houseworkers.</li>
+  <li>Users can log out to return to the login screen at any time.</li>
+</ul>
+
 <h2>Setup Instructions</h2>
 <ol>
   <li>Clone the repository:<br />
