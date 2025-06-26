@@ -51,6 +51,7 @@ button {
 
 button:hover {
   background: #2d4373;
+  transition: all 0.3s ease;
 }
 
 button:active {
