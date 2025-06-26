@@ -3,12 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
+    <title>>Housekeeping on Demand</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <!-- Login/Register Form -->
+<section id="auth-section">
+  <h2>Login or Register</h2>
+  <form id="authForm">
+    <input type="text" id="authName" placeholder="Full Name" required />
+    <input type="email" id="authEmail" placeholder="Email" required />
+    <input type="password" id="authPassword" placeholder="Password" required />
+    <select id="authRole">
+      <option value="client">Client</option>
+      <option value="houseworker">Houseworker</option>
+    </select>
+    <button type="submit">Login / Register</button>
+  </form>
+</section>
 
+  <header>
+    <h1>Housekeeping on Demand</h1>
+  </header>
 
-    <script src="./script.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
