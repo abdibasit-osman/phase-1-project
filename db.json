@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Abdibasit Osman",
+      "email": "Osman@example.com",
+      "role": "client"
+    },
+    {
+      "id": 2,
+      "name": "Mery Anna",
+      "email": "mery@example.com",
+      "role": "houseworker"
+    }
+  ],
+  "bookings": [
+    {
+      "id": 1,
+      "clientId": 1,
+      "service": "Cleaning",
+      "address": "Eastleigh 1st avenue",
+      "date": "2025-06-28T10:00",
+      "instructions": "Please focus on the kitchen.",
+      "status": "Pending"
+    }
+  ]
+}
