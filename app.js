@@ -19,6 +19,8 @@ function showDashboardSection() {
   document.getElementById('booking-section').style.display = 'none';
   document.getElementById('dashboard-section').style.display = 'block';
   document.getElementById('thankyou-section').style.display = 'none';
+
+   renderBookingsDashboard();
 }
 
 function showThankYouSection() {
@@ -135,3 +137,34 @@ document.getElementById('bookingForm').addEventListener('submit', async function
 document.getElementById('makeAnotherBookingBtn').addEventListener('click', function() {
   showBookingSection();
 });
+
+
+// Fetch all bookings from the server
+async function fetchAllBookings() {
+  const res = await fetch(`${API_URL}/posts`);
+  return await res.json();
+}
+
+// Render bookings in the dashboard
+async function renderBookingsDashboard() {
+  const bookingsList = document.getElementById('bookingsList');
+  bookingsList.innerHTML = '<p>Loading bookings...</p>';
+  const bookings = await fetchAllBookings();
+
+  if (!bookings.length) {
+    bookingsList.innerHTML = '<p>No bookings found.</p>';
+    return;
+  }
+
+  // Render each booking
+  bookingsList.innerHTML = bookings.map(booking => `
+    <div class="booking-card">
+      <strong>Service:</strong> ${booking.service}<br>
+      <strong>Address:</strong> ${booking.address}<br>
+      <strong>Date:</strong> ${booking.date}<br>
+      <strong>Instructions:</strong> ${booking.instructions || 'None'}<br>
+      <strong>Status:</strong> ${booking.status}
+    </div>
+    <hr>
+  `).join('');
+}

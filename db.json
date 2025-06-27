@@ -20,6 +20,13 @@
       "email": "abdibasitosman@gmail.com",
       "password": "11111",
       "role": "client"
+    },
+    {
+      "id": "c2a4",
+      "name": "Osman",
+      "email": "osman@gmail.com",
+      "password": "22222",
+      "role": "houseworker"
     }
   ],
   "posts": [
@@ -42,102 +49,21 @@
       "status": "Pending"
     },
     {
-      "id": "673f",
-      "clientId": "2b01",
-      "service": "Cooking",
-      "address": "Eastleigh 1st avenue Al Habib Mall 7th floor room no.5",
-      "date": "2025-06-28T12:29",
-      "instructions": "cooking chicken briyani ",
-      "status": "Pending"
-    },
-    {
-      "id": "a6eb",
+      "id": "90a4",
       "clientId": "2b01",
       "service": "Laundry",
       "address": "Eastleigh 1st avenue Al Habib Mall 7th floor room no.5",
-      "date": "2025-06-27T11:00",
+      "date": "2025-06-27T07:07",
       "instructions": "",
       "status": "Pending"
     },
     {
-      "id": "4168",
-      "clientId": "2b01",
-      "service": "Laundry",
-      "address": "Eastleigh 1st avenue Al Habib Mall 7th floor room no.5",
-      "date": "2025-06-26T23:07",
-      "instructions": "no",
-      "status": "Pending"
-    },
-    {
-      "id": "f8a1",
-      "clientId": "2b01",
-      "service": "Cooking",
-      "address": "Eastleigh 1st avenue Al Habib Mall 7th floor room no.5",
-      "date": "2025-06-28T23:09",
-      "instructions": "",
-      "status": "Pending"
-    },
-    {
-      "id": "b5b6",
+      "id": "b511",
       "clientId": "2b01",
       "service": "Cleaning",
       "address": "Eastleigh 1st avenue Al Habib Mall 7th floor room no.5",
-      "date": "2025-07-05T23:11",
+      "date": "2025-06-27T07:15",
       "instructions": "",
-      "status": "Pending"
-    },
-    {
-      "id": "c846",
-      "clientId": "2b01",
-      "service": "Laundry",
-      "address": "Eastleigh 1st avenue Al Habib Mall 7th floor room no.5",
-      "date": "2025-07-03T23:15",
-      "instructions": "no",
-      "status": "Pending"
-    },
-    {
-      "id": "b997",
-      "clientId": "2b01",
-      "service": "Cleaning",
-      "address": "Eastleigh 1st avenue Al Habib Mall 7th floor room no.5",
-      "date": "2025-06-30T23:16",
-      "instructions": "",
-      "status": "Pending"
-    },
-    {
-      "id": "76eb",
-      "clientId": "2b01",
-      "service": "Laundry",
-      "address": "Eastleigh 1st avenue Al Habib Mall 7th floor room no.5",
-      "date": "2025-07-01T23:19",
-      "instructions": "",
-      "status": "Pending"
-    },
-    {
-      "id": "116d",
-      "clientId": "2b01",
-      "service": "Cleaning",
-      "address": "Eastleigh 1st avenue Al Habib Mall 7th floor room no.5",
-      "date": "2025-07-01T23:54",
-      "instructions": "",
-      "status": "Pending"
-    },
-    {
-      "id": "1dbd",
-      "clientId": "2b01",
-      "service": "Laundry",
-      "address": "Eastleigh 1st avenue Al Habib Mall 7th floor room no.5",
-      "date": "2025-07-03T23:57",
-      "instructions": "",
-      "status": "Pending"
-    },
-    {
-      "id": "779e",
-      "clientId": "2b01",
-      "service": "Cleaning",
-      "address": "Eastleigh 1st avenue Al Habib Mall 7th floor room no.5",
-      "date": "2025-07-03T00:01",
-      "instructions": "nothing",
       "status": "Pending"
     }
   ]
