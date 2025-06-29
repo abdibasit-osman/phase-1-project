@@ -1,0 +1,19 @@
+{
+  "name": "phase-1-project",
+  "version": "1.0.0",
+  "description": "phase-1-project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdibasit-osman/phase-1-project.git"
+  },
+  "author": "Abdibasit Osman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdibasit-osman/phase-1-project/issues"
+  },
+  "homepage": "https://github.com/abdibasit-osman/phase-1-project#readme"
+}
