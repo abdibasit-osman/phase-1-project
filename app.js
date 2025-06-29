@@ -145,26 +145,105 @@ async function fetchAllBookings() {
   return await res.json();
 }
 
-// Render bookings in the dashboard
+// Fetch all users from the server
+async function fetchAllUsers() {
+  const res = await fetch(`${API_URL}/users`);
+  return await res.json();
+}
+
+// Render bookings in the dashboard, including client name/email for houseworkers
 async function renderBookingsDashboard() {
   const bookingsList = document.getElementById('bookingsList');
   bookingsList.innerHTML = '<p>Loading bookings...</p>';
   const bookings = await fetchAllBookings();
+  const users = await fetchAllUsers();
 
-  if (!bookings.length) {
+  // Create a lookup: userId -> user object
+  const userMap = {};
+  users.forEach(user => {
+    userMap[user.id] = user;
+  });
+
+  const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+  // Filter bookings for client, or show all for houseworker
+  let filteredBookings = bookings;
+  if (loggedInUser && loggedInUser.role === 'client') {
+    filteredBookings = bookings.filter(b => b.clientId === loggedInUser.id);
+  }
+
+  if (!filteredBookings.length) {
     bookingsList.innerHTML = '<p>No bookings found.</p>';
     return;
   }
 
   // Render each booking
-  bookingsList.innerHTML = bookings.map(booking => `
-    <div class="booking-card">
-      <strong>Service:</strong> ${booking.service}<br>
-      <strong>Address:</strong> ${booking.address}<br>
-      <strong>Date:</strong> ${booking.date}<br>
-      <strong>Instructions:</strong> ${booking.instructions || 'None'}<br>
-      <strong>Status:</strong> ${booking.status}
-    </div>
-    <hr>
-  `).join('');
+  bookingsList.innerHTML = filteredBookings.map(booking => {
+    const client = userMap[booking.clientId];
+    const isHouseworker = loggedInUser.role === 'houseworker';
+    const isClient = loggedInUser.role === 'client';
+
+      let actionButtons = '';
+
+      if (isHouseworker) {
+        if (booking.status === 'Pending') {
+          actionButtons = `<button onclick="acceptBooking(${booking.id})">Accept</button>`;
+        } else if (booking.status === 'Accepted') {
+          actionButtons = `<button onclick="startJob(${booking.id})">Start Job</button>`;
+        }
+      }
+
+      if (isClient && booking.status === 'In Progress') {
+        actionButtons = `
+          <button onclick="finishBooking(${booking.id})">Mark Completed</button>
+          <button onclick="cancelBooking(${booking.id})">Cancel</button>
+        `;
+      }
+    return `
+      <div class="booking-card">
+        <strong>Service:</strong> ${booking.service}<br>
+        <strong>Address:</strong> ${booking.address}<br>
+        <strong>Date:</strong> ${new Date(booking.date).toLocaleString()}<br>
+        <strong>Instructions:</strong> ${booking.instructions || 'None'}<br>
+        <strong>Status:</strong> ${booking.status}<br>
+        ${loggedInUser.role === 'houseworker' && client ? `
+          <hr>
+          <strong>Client Name:</strong> ${client.name}<br>
+          <strong>Client Email:</strong> ${client.email}<br>
+        ` : ''}
+        ${actionButtons}
+      </div>
+      <hr>
+    `;
+  }).join('');
 }
+
+
+async function updateBookingStatus(bookingId, newStatus) {
+  const res = await fetch(`${API_URL}/posts/${bookingId}`, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ status: newStatus })
+  });
+  return await res.json();
+}
+
+window.acceptBooking = async function(bookingId) {
+  await updateBookingStatus(bookingId, 'Accepted');
+  renderBookingsDashboard();
+};
+
+window.startJob = async function(bookingId) {
+  await updateBookingStatus(bookingId, 'In Progress');
+  renderBookingsDashboard();
+};
+
+window.finishBooking = async function(bookingId) {
+  await updateBookingStatus(bookingId, 'Completed');
+  renderBookingsDashboard();
+};
+
+window.cancelBooking = async function(bookingId) {
+  await updateBookingStatus(bookingId, 'Cancelled');
+  renderBookingsDashboard();
+};
