@@ -8,56 +8,57 @@
 </head>
 <body>
     <!-- Login/Register Form -->
-<section id="login-section">
-  <h2>Login or Register</h2>
-  <form id="authForm">
-    <input type="text" id="authName" placeholder="Full Name" required />
-    <input type="email" id="authEmail" placeholder="Email" required />
-    <input type="password" id="authPassword" placeholder="Password" required />
-    <select id="authRole">
-      <option value="client">Client</option>
-      <option value="houseworker">Houseworker</option>
-    </select>
-    <button type="submit">Login / Register</button>
-  </form>
-</section>
+    <section id="login-section">
+      <h2>Login or Register</h2>
+      <form id="authForm">
+        <input type="text" id="authName" placeholder="Full Name" required />
+        <input type="email" id="authEmail" placeholder="Email" required />
+        <input type="password" id="authPassword" placeholder="Password" required />
+        <select id="authRole">
+          <option value="client">Client</option>
+          <option value="houseworker">Houseworker</option>
+        </select>
+        <button type="submit">Login / Register</button>
+      </form>
+    </section>
 
-  <header>
-    <h1>Housekeeping on Demand</h1>
-  </header>
+    <header>
+      <h1>Housekeeping on Demand</h1>
+    </header>
 
-   <!-- Booking Form -->
-  <section id="booking-section">
-    <h2>Request a Service</h2>
-    <form id="bookingForm">
-      <input type="text" id="address" placeholder="Address" required>
-      <select id="service">
-        <option value="Cleaning">Cleaning</option>
-        <option value="Laundry">Laundry</option>
-        <option value="Cooking">Cooking</option>
-      </select>
-      <input type="datetime-local" id="date" required>
-      <textarea id="instructions" placeholder="Special instructions"></textarea>
-      <button type="submit">Submit Booking</button>
-    </form>
-  </section>
+    <!-- Booking Form -->
+    <section id="booking-section">
+      <h2>Request a Service</h2>
+      <form id="bookingForm">
+        <input type="text" id="address" placeholder="Address" required>
+        <select id="service">
+          <option value="Cleaning">Cleaning</option>
+          <option value="Laundry">Laundry</option>
+          <option value="Cooking">Cooking</option>
+        </select>
+        <input type="datetime-local" id="date" required>
+        <textarea id="instructions" placeholder="Special instructions"></textarea>
+        <button type="submit">Submit Booking</button>
+      </form>
+      <button id="viewBookingsBtn" type="button" style="margin-top:1rem;">View My Bookings</button>
+    </section>
 
-  <!-- Bookings Dashboard -->
-  <section id="dashboard-section">
-    <h2>Bookings Dashboard</h2>
-    <div id="bookingsList">
-      <!-- Booking items will go here -->
-    </div>
-  </section>
+    <!-- Bookings Dashboard -->
+    <section id="dashboard-section">
+      <h2>Bookings Dashboard</h2>
+      <div id="bookingsList">
+        <!-- Booking items will go here -->
+      </div>
+    </section>
 
-  <section id="thankyou-section">
-    <div class="form-card">
-        <h2>Thank You!</h2>
-        <p>Your booking has been submitted successfully.</p>
-         <button id="makeAnotherBookingBtn" type="button">Make Another Booking</button>
-    </div>
-  </section>
+    <section id="thankyou-section">
+      <div class="form-card">
+          <h2>Thank You!</h2>
+          <p>Your booking has been submitted successfully.</p>
+          <button id="makeAnotherBookingBtn" type="button">Make Another Booking</button>
+      </div>
+    </section>
 
-  <script src="./app.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>

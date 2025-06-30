@@ -67,3 +67,42 @@ button:active {
   margin-bottom: 1rem;
   border: 1px solid #ddd;
 }
+
+/* Your existing CSS above... */
+
+.error-message {
+  background: #ffefef;
+  border: 1px solid #d9534f;
+  color: #d9534f;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin: 1rem auto 0 auto;
+  max-width: 600px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+#logoutBtn {
+  background: #d9534f;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(59, 89, 152, 0.12);
+}
+#logoutBtn:hover {
+  background: #c9302c;
+}
+
+.info-message {
+  background: #eaf6ea;
+  border: 1px solid #4cae4c;
+  color: #307430;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin: 1rem auto 0 auto;
+  max-width: 600px;
+  text-align: center;
+  font-size: 1rem;
+}

@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Abdibasit Osman",
-      "email": "Osman@example.com",
-      "password": "password123",
-      "role": "client"
-    },
-    {
       "id": "2",
       "name": "Mery Anna",
       "email": "mery@example.com",
@@ -27,18 +20,16 @@
       "email": "osman@gmail.com",
       "password": "22222",
       "role": "houseworker"
+    },
+    {
+      "id": "ff0b",
+      "name": "Abdibasit Osman",
+      "email": "osman@example.com",
+      "password": "password123",
+      "role": "client"
     }
   ],
   "posts": [
-    {
-      "id": "1",
-      "clientId": 1,
-      "service": "Cleaning",
-      "address": "Eastleigh 1st avenue",
-      "date": "2025-06-28T10:00",
-      "instructions": "Please focus on the kitchen.",
-      "status": "In Progress"
-    },
     {
       "id": "0d9e",
       "clientId": "2b01",
@@ -46,7 +37,7 @@
       "address": "Eastleigh 1st avenue Al Habib Mall 7th floor room no.5",
       "date": "2025-06-27T22:24",
       "instructions": "no special instructions",
-      "status": "Pending"
+      "status": "Completed"
     },
     {
       "id": "90a4",
@@ -55,25 +46,7 @@
       "address": "Eastleigh 1st avenue Al Habib Mall 7th floor room no.5",
       "date": "2025-06-27T07:07",
       "instructions": "",
-      "status": "Pending"
-    },
-    {
-      "id": "b511",
-      "clientId": "2b01",
-      "service": "Cleaning",
-      "address": "Eastleigh 1st avenue Al Habib Mall 7th floor room no.5",
-      "date": "2025-06-27T07:15",
-      "instructions": "",
-      "status": "Pending"
-    },
-    {
-      "id": "c0af",
-      "clientId": "2b01",
-      "service": "Cleaning",
-      "address": "Eastleigh 1st avenue Al Habib Mall 7th floor room no.5",
-      "date": "2025-07-12T09:50",
-      "instructions": "",
-      "status": "Pending"
+      "status": "Accepted"
     }
   ]
 }

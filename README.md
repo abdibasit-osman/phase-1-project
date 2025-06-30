@@ -74,7 +74,7 @@
   <li>Open <code>index.html</code> in your browser.</li>
   <li>
     <b>Live page:</b>
-    <a href="https://abdibasit-osman.github.io/phase-1-project.git/">https://abdibasit-osman.github.io/phase-1-project.git/</a>
+    <a href="https://abdibasit-osman.github.io/phase-1-project/">https://abdibasit-osman.github.io/phase-1-project.git/</a>
   </li>
 </ol>
 
