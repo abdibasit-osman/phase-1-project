@@ -46,6 +46,15 @@
       "address": "Eastleigh 1st avenue Al Habib Mall 7th floor room no.5",
       "date": "2025-06-27T07:07",
       "instructions": "",
+      "status": "Cancelled"
+    },
+    {
+      "id": "f9a7",
+      "clientId": "2b01",
+      "service": "Cooking",
+      "address": "Eastleigh 1st avenue Al Habib Mall 7th floor room no.5",
+      "date": "2025-07-01T10:44",
+      "instructions": "",
       "status": "Accepted"
     }
   ]

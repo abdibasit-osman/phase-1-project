@@ -80,7 +80,17 @@ window.addEventListener('DOMContentLoaded', () => {
     showBookingSection();
   });
 
-  showLoginSection();
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+  if (loggedInUser) {
+    // User is still logged in, show the right section based on their role
+    if (loggedInUser.role === 'client') {
+      showBookingSection(); 
+    } else if (loggedInUser.role === 'houseworker') {
+      showDashboardSection();
+    }
+  } else {
+    showLoginSection();
+  }
 });
 
 // --- AUTHENTICATION LOGIC USING json-server ---
