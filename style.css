@@ -68,8 +68,6 @@ button:active {
   border: 1px solid #ddd;
 }
 
-/* Your existing CSS above... */
-
 .error-message {
   background: #ffefef;
   border: 1px solid #d9534f;

@@ -5,6 +5,9 @@
 
 ## https://abdibasit-osman.github.io/phase-1-project/
 
+## @George: please the video below is meant to be watched in 1.5x speed
+## https://www.loom.com/share/b9c7b40d75b046a591197def0eec41ad?sid=33a54bf4-ce1f-4df7-93bd-6887415dbd1f
+
 <hr />
 
 <h2>Description</h2>
